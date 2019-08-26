@@ -23,8 +23,8 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-              "src/styles.css"
+            "styles": [  
+              "node_modules/@nebular/theme/styles/prebuilt/default.css"
             ],
             "scripts": []
           },
@@ -115,6 +115,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "CoeChatBot"
+    }
+  },
+  "defaultProject": "CoeChatBot",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -24,7 +24,7 @@ export class ChatBotComponent {
   constructor(private chatService: ChatCoeService) {
   }
 
-  private enterKeyDown(event: KeyboardEvent){
+  enterKeyDown(event: KeyboardEvent){
     if(event.key === "Enter"){ this.sendMessage() }
   }
 

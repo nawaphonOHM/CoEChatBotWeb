@@ -21,7 +21,7 @@
                                 <div class="received-msg">
                                     <div class="received-msg-inbox">
                                         <p>{{msg.msg}}</p>
-                                        <span class="time">{{msg.time | date : 'medium'}}</span>
+                                        <span class="time">{{msg.time | date : 'hh:mm:ssa dd/MM/yyyy E'}}</span>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="outgoing-chats-msg">
                                     <p>{{msg.msg}}</p>
-                                    <span class="time">{{msg.time | date : 'medium'}}</span>
+                                    <span class="time">{{msg.time | date : 'hh:mm:ssa dd/MM/yyyy E'}}</span>
                                 </div>
                             </div>
                         </ng-template>

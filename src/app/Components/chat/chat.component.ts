@@ -20,6 +20,7 @@ export class ChatBotComponent {
   status: string = 'now'
   typingMessage: string = null;
   private state: string = null;
+  inputPlaceholder: string = 'ต้องการจะถามอะไร'
 
   constructor(private chatService: ChatCoeService) {
   }

@@ -16,7 +16,7 @@ export class ChatCoeService {
     headers.append('Content-Type', 'application/json; charset=utf-8');
 
     return this.ChatWithBot.post<SentMessage>(
-        "https://ohmlzise:1996/chatwithbot", 
+        "http://localhost:1996/chatwithbot", 
         JSON.stringify(sentMessage), 
         {headers}
       )

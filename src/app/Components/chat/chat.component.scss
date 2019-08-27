@@ -53,7 +53,7 @@ img{
     height: 10%;
     border-bottom: none;
     display: inline-block;
-    background-color: #007bff;
+    background-color: #660000;
 }
 .msg-header-img{
     border-radius: 50%;
@@ -83,7 +83,7 @@ img{
     padding: 0 0 3.125rem 0;
 }
 .msg-inbox{
-    border: 0.625rem solid #cccccc;
+    border: 0.625rem solid #990000;
     overflow: hidden;
     padding-bottom: 1.875rem;
 }
@@ -105,9 +105,9 @@ img{
     width: 45%;
 }
 .received-msg-inbox p{
-    background: #efefef none repeat scroll 0 0;
+    background: #800000 none repeat scroll 0 0;
     border-radius: 0.625rem;
-    color: #646464;
+    color: #ffffff;
     font-size: 0.875rem;
     margin: 0;
     padding: 0.3125rem 0.625rem 0.3125rem 0.75rem
@@ -123,12 +123,11 @@ img{
     margin: 1.625rem 1.625rem;
 }
 .outgoing-chats-msg p{
-    background: #007bff none repeat scroll 0 0;
+    background: #660000 none repeat scroll 0 0;
     color: #ffffff;
     border-radius: 0.625rem;
     font-size: 0.875rem;
     margin: 0;
-    color: #ffffff;
     padding: 0.3125rem 0.625rem 0.3125rem 0.8125rem;
     width: 100%
 }
@@ -145,7 +144,7 @@ img{
 .msg-bottom{
     position: relative;
     height: 10%;
-    background-color: #007bff;
+    background-color: #660000;
     display: inline-block;
     width: 100%;
 }
@@ -169,6 +168,6 @@ img{
     border: none !important;
 }
 .input-group .fa{
-    color: #007bff;
+    color: #660000;
     float: right;
 }

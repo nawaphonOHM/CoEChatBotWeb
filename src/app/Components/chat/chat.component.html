@@ -43,7 +43,7 @@
         </div>
         <div class="msg-bottom">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="พูดคุย" 
+                <input type="text" class="form-control" [placeholder]="inputPlaceholder" 
                     [(ngModel)]="typingMessage" (keydown)="enterKeyDown($event)">
                 <div class="input-group-append">
                     <span class="input-group-text" (click)="sendMessage()">

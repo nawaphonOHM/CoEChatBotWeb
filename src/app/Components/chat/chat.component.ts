@@ -49,6 +49,7 @@ export class ChatBotComponent {
         afterSendMessage.time = Date.now();
         afterSendMessage.sender = false;
         afterSendMessage.msg = data.msg
+        this.state = data.state
         this.messages.push(afterSendMessage);
       }, 
       (error: any) => { 

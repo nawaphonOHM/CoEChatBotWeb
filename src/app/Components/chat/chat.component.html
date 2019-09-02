@@ -12,7 +12,7 @@
         <div class="msg-inbox">
             <div class="chats">
                 <div class="msg-page">
-                    <div *ngFor="let msg of messages">
+                    <div *ngFor="let msg of messages" #Message> 
                         <ng-container *ngIf="!msg.sender; else elseTemplate">
                             <div class="received-chats">
                                 <div class="received-chats-img">

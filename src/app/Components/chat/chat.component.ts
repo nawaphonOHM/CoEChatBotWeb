@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChildren, QueryList } from '@angular/core';
 
-import { ChatCoeService } from 'src/app/Services/chat-coe.service'
+import { ChatCoeService } from 'src/app/Services/chat-coe.service';
 import { SentMessage } from 'src/app/Models/sent-message';
-import { ShowMessage } from 'src/app/Models/show-message'
+import { ShowMessage } from 'src/app/Models/show-message';
 
 
 @Component({
@@ -14,22 +14,31 @@ import { ShowMessage } from 'src/app/Models/show-message'
 export class ChatBotComponent {
 
   messages: ShowMessage[] = [];
+  @ViewChildren("Message") messageBox: QueryList<ShowMessage>;
   botImage: string = '../../assets/img/bot.jpeg';
   humenImage: string = '../../assets/img/humen.jpeg';
-  botName: string = 'Coe Chat Bot'
-  status: string = 'now'
+  botName: string = 'Coe Chat Bot';
+  status: string = 'now';
   typingMessage: string = null;
   private state: string = null;
-  inputPlaceholder: string = 'ต้องการจะถามอะไร'
+  inputPlaceholder: string = 'ต้องการจะถามอะไร';
+  private msgBox: Element;
 
   constructor(private chatService: ChatCoeService) {
   }
 
-  enterKeyDown(event: KeyboardEvent){
-    if(event.key === "Enter"){ this.sendMessage() }
+  ngAfterViewInit(): void{
+    this.msgBox = document.getElementsByClassName("msg-page")[0];
+    this.messageBox.changes.subscribe(
+      () => { this.msgBox.scrollTo(0, this.msgBox.scrollHeight); }
+    )
   }
 
-  sendMessage() {
+  enterKeyDown(event: KeyboardEvent): void{
+    if(event.key === "Enter"){ this.sendMessage(); }
+  }
+
+  sendMessage(): void {
     let newMessage: SentMessage = new SentMessage();
     let beforeSendMessage: ShowMessage = new ShowMessage()
 
@@ -44,17 +53,16 @@ export class ChatBotComponent {
 
     this.chatService.send(newMessage).subscribe(
       (data: SentMessage): void => {
-        let afterSendMessage = new ShowMessage()
-        
+        let afterSendMessage = new ShowMessage();
         afterSendMessage.time = Date.now();
         afterSendMessage.sender = false;
-        afterSendMessage.msg = data.msg
-        this.state = data.state
+        afterSendMessage.msg = data.msg;
+        this.state = data.state;
         this.messages.push(afterSendMessage);
       }, 
-      (error: any) => { 
-        console.log(error) 
+      (error: any): void => { 
+        console.log(error); 
       }, null);
-    this.typingMessage = null; 
+    this.typingMessage = null;
   }
 }

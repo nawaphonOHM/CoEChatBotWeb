@@ -12,7 +12,7 @@ export class ChatCoeService {
   constructor(private ChatWithBot: HttpClient) { }
 
   send(sentMessage: SentMessage): Observable<SentMessage>{
-    let headers = new HttpHeaders
+    let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json; charset=utf-8');
 
     return this.ChatWithBot.post<SentMessage>(

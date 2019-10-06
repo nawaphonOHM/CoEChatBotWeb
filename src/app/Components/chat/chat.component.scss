@@ -1,37 +1,44 @@
-@media (max-width: 320px)  { 
-    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media(min-height: 568px){
     .msg-page{
-        height: 5.625rem;
-    }
- }
-@media (max-width: 480px)  { 
-    /* smartphones, Android phones, landscape iPhone */ 
-    .msg-page{
-        height: 8.4375rem;
+        height: 22rem !important;
     }
 }
-@media (max-width: 600px)  { 
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+@media(min-height: 640px){ 
     .msg-page{
-        height: 10.5625rem;
+        height: 26.25rem !important;
+    }
+    .form-control{
+        font-size: 2.25vw;
     }
 }
-@media (max-width: 801px)  { 
-    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media(min-height: 667px){
     .msg-page{
-        height: 14.0625rem;
+        height: 28rem !important;
     }
 }
-@media (max-width: 1025px) { 
-    /* big landscape tablets, laptops, and desktops */ 
+@media(min-height: 731px){
     .msg-page{
-        height: 18rem;
+        height: 32rem !important;
     }
 }
-@media (max-width: 1281px) { 
-    /* hi-res laptops and desktops */ 
+@media(min-height: 812px){
     .msg-page{
-        height: 22.5rem;
+        height: 37rem !important;
+    }
+}
+@media(min-height: 823px){
+    .msg-page{
+        height: 37.75rem !important;
+    } 
+}
+@media(min-height: 1024px){
+    .msg-page{
+        height: 50.25rem !important;
+    }
+}
+@media(min-height: 1366px){
+    .msg-page{
+        height: 71.5rem !important;
     }
 }
 
@@ -39,135 +46,152 @@
     max-width: 100% !important;
     margin: auto;
     margin-top: 1%;
-    font-family: sans-serif;
-    letter-spacing: 0.3125rem;
+    font-family: noto-serif;
 }
 
 img{
-    max-width: 100%;
     border-radius: 50%;
+    width: 9vh;
 }
 .msg-header{
-    border: 0.0625rem solid #cccccc;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     border-bottom: none;
-    display: inline-block;
     background-color: #660000;
+    display: flex;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    border: 0.1vh solid #660000;
 }
 .msg-header-img{
     border-radius: 50%;
-    width: 2.5rem;
-    margin-left: 5%;
-    margin-top: 0.75rem;
-    float: left;
+    width: 9vh;
+    font-size: 20vw;
+    height: 9vh;
+    display: flex;
+    margin-left: 0.5vw;
+    margin-right: 1vw;
 }
 .active{
-    width: 12rem;
-    float: left;
-    margin-top: 0.625rem;
+    width: 91vw;
 }
 .active h4{
-    font-size: 1.25rem;
-    margin-left: 0.625rem;
+    font-size: 5vh;
+    font-weight: bold;
+    margin-bottom: 0;
     color: #ffffff;
 }
 .active h6{
-    font-size: 0.625rem;
-    margin-left: 0.625rem;
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
     line-height: 0.125rem;
     color: #ffffff;
     white-space: pre-wrap;
 }
 .chat-page{
-    padding: 0 0 3.125rem 0;
+    padding: 0;
 }
 .msg-inbox{
-    border: 0.625rem solid #990000;
+    border: 1vh solid #990000;
     overflow: hidden;
-    padding-bottom: 1.875rem;
+    height: 80vh;
 }
 .chats{
-    padding: 1.875rem 0.9375rem 0 1.5625rem;
+    padding: 1vh 1vw 0 1vw;
 }
 .msg-page{
-    height: 24rem;
     overflow-y: auto;
 }
-.received-chats-img{
-    display: inline-block;
-    width: 2.5rem;
-    float: left;
+.received-chats{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.received-chats-img img{
+    width: 2.50vw;
 }
 .received-msg{
-    display: inline-block;
     vertical-align: top;
-    width: 45%;
+    width: 40vw;
+    margin-right: 2vw;
 }
 .received-msg-inbox p{
     background: #800000 none repeat scroll 0 0;
     border-radius: 0.625rem;
     color: #ffffff;
-    font-size: 0.875rem;
+    font-size: 2.5vh;
     margin: 0;
-    padding: 0.3125rem 0.625rem 0.3125rem 0.75rem
+    padding: 1vh 1vw 1vh 1vw;
 }
 .time{
     color: #777777;
-    display: block;
     font-size: 0.75rem;
-    margin: 0.5rem 0rem 0
 }
 .outgoing-chats{
     overflow: hidden;
-    margin: 1.625rem 1.625rem;
+    margin: 5vh 1vw;
+    display: flex;
+    width: 40vw;
 }
 .outgoing-chats-msg p{
     background: #660000 none repeat scroll 0 0;
     color: #ffffff;
     border-radius: 0.625rem;
-    font-size: 0.875rem;
+    font-size: 2.5vh;
     margin: 0;
-    padding: 0.3125rem 0.625rem 0.3125rem 0.8125rem;
-    width: 100%
+    padding: 1vh 1vw 1vh 1vw;
 }
 .outgoing-chats-msg{
-    float: right;
-    width: 50%;
-    margin-left: 40%;
+    width: 40vw;
+    margin-left: 2vw;
 }
 .outgoing-chats-img{
     display: inline-block;
-    width: 2.5rem;
-    float: right;
+}
+.outgoing-chats-img img{
+    width: 2.50vw;
 }
 .msg-bottom{
-    position: relative;
-    height: 10%;
+    //position: relative;
+    height: 7vh;
     background-color: #660000;
-    display: inline-block;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-right: 1vw;
     width: 100%;
 }
-.input-group{
-    float: right;
-    margin-top: 0.8125rem;
-    margin-bottom: 0.8125rem;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+.form-control-div{
     outline: none !important;
     border-radius: 1.25rem;
-    width: 61% !important;
+    min-width: 40% !important;
     background-color: #ffffff;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+}
+.form{
+    padding: 0vh 0vw 0vh 0vw;
+    width: 100%;
+    height: 100%;
 }
 .form-control{
+    border-radius: 1.25rem;
     border: none !important;
-    border-radius: 1.25rem !important;
+    width: 100%;
+    height: 100%;
+    font-size: 2.25vh;
+}
+.button{
+    display: flex;
+    align-content: center;
 }
 .input-group-text{
     background: transparent !important;
     border: none !important;
-}
-.input-group .fa{
     color: #660000;
-    float: right;
+    font-size: 3vh;
 }

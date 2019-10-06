@@ -42,12 +42,14 @@
             </div>
         </div>
         <div class="msg-bottom">
-            <div class="input-group">
-                <input type="text" class="form-control" [placeholder]="inputPlaceholder" 
-                    [(ngModel)]="typingMessage" (keydown)="enterKeyDown($event)">
-                <div class="input-group-append">
+            <div class="form-control-div">
+                <div class="form">
+                    <input type="text" class="form-control" [placeholder]="inputPlaceholder" 
+                        [(ngModel)]="typingMessage" (keydown)="enterKeyDown($event)">
+                </div>
+                <div class="button">
                     <span class="input-group-text" (click)="sendMessage()">
-                        <i class="fa fa-paper-plane"></i>
+                            <i class="fa fa-paper-plane"></i>
                     </span>
                 </div>
             </div>

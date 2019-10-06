@@ -24,7 +24,7 @@ export class ChatBotComponent {
   inputPlaceholder: string = 'ต้องการจะถามอะไร';
   private msgBox: Element;
 
-  constructor(private chatService: ChatCoeService) {
+  constructor(private chatService: ChatCoeService){
   }
 
   ngAfterViewInit(): void{
@@ -59,7 +59,7 @@ export class ChatBotComponent {
         afterSendMessage.msg = data.msg;
         this.state = data.state;
         this.messages.push(afterSendMessage);
-        
+        console.log(data)   
       }, 
       (error: any): void => { 
         console.log(error); 

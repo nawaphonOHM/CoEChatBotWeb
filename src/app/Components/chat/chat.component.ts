@@ -28,7 +28,7 @@ export class ChatBotComponent {
   }
 
   ngAfterViewInit(): void{
-    this.msgBox = document.getElementsByClassName("msg-page")[0];
+    this.msgBox = document.getElementsByClassName("msg-inbox")[0];
     this.messageBox.changes.subscribe(
       () => { this.msgBox.scrollTo(0, this.msgBox.scrollHeight); }
     )

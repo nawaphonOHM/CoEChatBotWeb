@@ -10,34 +10,32 @@
     </div>
     <div class="chat-page">
         <div class="msg-inbox">
-            <div class="chats">
-                <div class="msg-page">
-                    <div *ngFor="let msg of messages" #Message> 
-                        <ng-container *ngIf="!msg.sender; else elseTemplate">
-                            <div class="received-chats">
-                                <div class="received-chats-img">
-                                    <img [src]="botImage">
-                                </div>
-                                <div class="received-msg">
-                                    <div class="received-msg-inbox">
-                                        <p>{{msg.msg}}</p>
-                                        <span class="time">{{msg.time | date : 'hh:mm:ssa dd/MM/yyyy E'}}</span>
-                                    </div>
-                                </div>
+            <div class="msg-page">
+                <div *ngFor="let msg of messages" #Message> 
+                    <ng-container *ngIf="!msg.sender; else elseTemplate">
+                        <div class="received-chats">
+                            <div class="received-chats-img">
+                                <img [src]="botImage">
                             </div>
-                        </ng-container>
-                        <ng-template #elseTemplate>
-                            <div class="outgoing-chats">
-                                <div class="outgoing-chats-img">
-                                    <img [src]="humenImage">
-                                </div>
-                                <div class="outgoing-chats-msg">
+                            <div class="received-msg">
+                                <div class="received-msg-inbox">
                                     <p>{{msg.msg}}</p>
                                     <span class="time">{{msg.time | date : 'hh:mm:ssa dd/MM/yyyy E'}}</span>
                                 </div>
                             </div>
-                        </ng-template>
-                    </div>
+                        </div>
+                    </ng-container>
+                    <ng-template #elseTemplate>
+                        <div class="outgoing-chats">
+                            <div class="outgoing-chats-img">
+                                <img [src]="humenImage">
+                            </div>
+                            <div class="outgoing-chats-msg">
+                                <p>{{msg.msg}}</p>
+                                <span class="time">{{msg.time | date : 'hh:mm:ssa dd/MM/yyyy E'}}</span>
+                            </div>
+                        </div>
+                    </ng-template>
                 </div>
             </div>
         </div>

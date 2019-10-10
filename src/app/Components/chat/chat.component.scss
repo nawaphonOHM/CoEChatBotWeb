@@ -3,8 +3,9 @@
     height: 100% !important;
     max-height: 100% !important;
     position: fixed;
-    margin: auto;
+    padding: 1vw;
     font-family: noto-serif;
+    background-color: #c72828;
 }
 
 img{
@@ -63,6 +64,7 @@ img{
     height: 100%;
     padding-right: 2%;
     padding-left: 2%;
+    background-color: #ffffff;;
 }
 .received-chats{
     margin-top: 5%;

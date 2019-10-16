@@ -19,7 +19,7 @@ export class ChatBotComponent {
   humenImage: string = '../../assets/img/humen.jpeg';
   botName: string = 'Coe Chat Bot';
   status: string = 'now';
-  typingMessage: string = null;
+  typingMessage: string = '';
   private state: string = null;
   inputPlaceholder: string = 'ต้องการจะถามอะไร';
   private msgBox: Element;
@@ -39,8 +39,10 @@ export class ChatBotComponent {
   }
 
   sendMessage(): void {
+    if(this.typingMessage.length == 0){ return; }
+
     let newMessage: SentMessage = new SentMessage();
-    let beforeSendMessage: ShowMessage = new ShowMessage()
+    let beforeSendMessage: ShowMessage = new ShowMessage();
 
     beforeSendMessage.msg = this.typingMessage;
     beforeSendMessage.sender = true;
@@ -59,7 +61,7 @@ export class ChatBotComponent {
         afterSendMessage.msg = data.msg;
         this.state = data.state;
         this.messages.push(afterSendMessage);
-        console.log(data)   
+        console.log(data);
       }, 
       (error: any): void => { 
         console.log(error); 

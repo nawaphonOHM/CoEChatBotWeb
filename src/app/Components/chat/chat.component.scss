@@ -1,3 +1,78 @@
+@media(orientation: portrait){
+    .container{
+        padding: 1vh !important;
+    }
+    .msg-header{
+        border: 0.1vw solid #660000 !important;
+    }
+    .msg-header-img{
+        max-width: 9vw !important;
+        max-height: 9vw !important;
+        margin-left: 0.5vh !important;
+        margin-right: 1vh !important;
+    }
+    .active h4{
+        font-size: 5vw !important;
+    }
+    .active h6{
+        font-size: 2.5vw !important;
+        margin-left: 0.5vh !important;
+        margin-top: 1vw !important;
+        line-height: 0.125rem !important;
+    }
+    .msg-inbox{
+        border: 1vw solid #990000 !important;
+    }
+    .received-chats-img img{
+        width: 2.50vh !important;
+        height: 2.50vh !important;
+    }
+    .received-msg{
+        margin-right: 2vh !important;
+    }
+    .received-msg-inbox p{
+        font-size: 2vw !important;
+        padding: 1% 0 1% 1vh !important;
+    }
+    .time{
+        font-size: 1.75vw !important;
+        padding: 0 0 0 1.5vh !important;
+    }
+    .outgoing-chats{
+        margin-top: 5vw !important;
+        margin-bottom: 5vw !important;
+    }
+    .outgoing-chats-msg p{
+        font-size: 2vw !important;
+        padding: 1% 0 1% 1vh !important;
+    }
+    .outgoing-chats-msg{
+        margin-left: 2vh !important;
+    }
+    .outgoing-chats-img img{
+        width: 2.50vh !important;
+        height: 2.50vh !important;
+    }
+    .msg-bottom{
+        height: 7vw !important;
+        padding-right: 1vh !important;
+    }
+    .form-control-div{
+        border-radius: 1.25vw !important;
+        height: 5vw !important;
+    }
+    .form-control{
+        border-radius: 1.25vw !important;
+        font-size: 2.25vw !important;
+        padding: 0% 0% 0% 1.5vw !important;
+    }
+    .input-group-text{
+        font-size: 3vw !important;
+        padding: 0px 1.5vw 0px 0px !important;
+    }
+}
+
+
 .container{
     max-width: 100% !important;
     height: 100% !important;
@@ -24,14 +99,15 @@ img{
 }
 .msg-header-img{
     border-radius: 50%;
-    width: 9vh;
-    height: 9vh;
+    max-width: 9vh;
+    max-height: 9vh;
     display: flex;
     margin-left: 0.5vw;
     margin-right: 1vw;
 }
 .active{
     width: 91%;
+    max-height: 100%;
 }
 .active h4{
     font-size: 5vh;
@@ -79,7 +155,7 @@ img{
 }
 .received-msg{
     vertical-align: top;
-    width: 40vw;
+    width: 40%;
     margin-right: 2vw;
 }
 .received-msg-inbox p{
@@ -87,13 +163,13 @@ img{
     border-radius: 0.625rem;
     color: #ffffff;
     font-size: 2vh;
-    padding: 1% 2% 1% 2%;
+    padding: 1% 0 1% 1vw;
     margin: 0;
 }
 .time{
     color: #777777;
     font-size: 1.75vh;
-    padding: 1% 2% 1% 2%;
+    padding: 0 0 0 1.5vw;
 }
 .outgoing-chats{
     margin-top: 5vh;
@@ -107,11 +183,11 @@ img{
     color: #ffffff;
     border-radius: 0.625rem;
     font-size: 2vh;
-    padding: 1% 2% 1% 2%;
+    padding: 1% 0 1% 1vw;
     margin: 0;
 }
 .outgoing-chats-msg{
-    width: 40vw;
+    width: 40%;
     margin-left: 2vw;
 }
 .outgoing-chats-img img{
@@ -139,7 +215,7 @@ img{
     align-content: center;
 }
 .form{
-    padding: 0vh 0vw 0vh 0vw;
+    padding: 0;
     width: 100%;
     height: 100%;
 }
@@ -149,6 +225,7 @@ img{
     width: 100%;
     height: 100%;
     font-size: 2.25vh;
+    padding: 0% 0% 0% 1.5vh;
 }
 .button{
     display: flex;
@@ -159,4 +236,5 @@ img{
     border: none !important;
     color: #660000;
     font-size: 3vh;
+    padding: 0px 1.5vh 0px 0px;
 }

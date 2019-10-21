@@ -19,6 +19,6 @@ export class ChatCoeService {
         "/chatwithbot", 
         JSON.stringify(sentMessage), 
         {headers}
-      )
+      );
   }
 }

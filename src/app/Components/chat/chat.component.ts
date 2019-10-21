@@ -61,7 +61,6 @@ export class ChatBotComponent {
         afterSendMessage.msg = data.msg;
         this.state = data.state;
         this.messages.push(afterSendMessage);
-        console.log(data);
       }, 
       (error: any): void => { 
         console.log(error); 

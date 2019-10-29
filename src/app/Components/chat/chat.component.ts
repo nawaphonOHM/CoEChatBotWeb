@@ -19,18 +19,18 @@ export class ChatBotComponent {
   humenImage: string = '../../assets/img/humen.jpeg';
   botName: string = 'Coe Chat Bot';
   status: string = 'now';
-  typingMessage: string = '';
+  typingMessage: string = null;
   private state: string = null;
   inputPlaceholder: string = 'ต้องการจะถามอะไร';
-  private msgBox: Element;
 
   constructor(private chatService: ChatCoeService){
   }
 
   ngAfterViewInit(): void{
-    this.msgBox = document.getElementsByClassName("msg-page")[0];
+    let msgBox: Element = document.getElementsByClassName("msg-page")[0];
+
     this.messageBox.changes.subscribe(
-      () => { this.msgBox.scrollTo(0, this.msgBox.scrollHeight); }
+      () => { msgBox.scrollTo(0, msgBox.scrollHeight); }
     )
   }
 
@@ -39,7 +39,9 @@ export class ChatBotComponent {
   }
 
   sendMessage(): void {
-    if(this.typingMessage.length == 0){ return; }
+    if(this.typingMessage === null || this.typingMessage.length == 0){ 
+      return; 
+    }
 
     let newMessage: SentMessage = new SentMessage();
     let beforeSendMessage: ShowMessage = new ShowMessage();

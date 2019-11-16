@@ -65,7 +65,7 @@ export class ChatBotComponent {
         this.messages.push(afterSendMessage);
       }, 
       (error: any): void => { 
-        console.log(error); 
+        console.error(error); 
       }, null);
     this.typingMessage = null;
   }
